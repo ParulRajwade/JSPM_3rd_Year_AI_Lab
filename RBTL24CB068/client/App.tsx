@@ -8,6 +8,8 @@ import { summarizeText, chatWithContext, generateFlashcards, translateText, reph
 import { LockIcon } from './constants';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+
+
 const App: React.FC = () => {
   const [summaries, setSummaries] = useState<Summary[]>([]);
   const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
