@@ -1,0 +1,213 @@
+<<<<<<< HEAD
+/* MoodTracker.css */
+
+.mood-tracker {
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.mood-tracker h2 {
+  text-align: center;
+  color: #00695c;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.mood-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mood-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #b2dfdb;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mood-btn span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #00796b;
+}
+
+.mood-btn:hover {
+  background: #e0f2f1;
+  transform: translateY(-3px);
+  border-color: #00796b;
+}
+
+.mood-btn.selected {
+  background: #b2dfdb;
+  border-color: #00796b;
+  font-weight: bold;
+}
+
+.mood-history {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+}
+
+.mood-history h3 {
+  color: #004d40;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.mood-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mood-history li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 1rem;
+  color: #444;
+}
+
+.mood-history li span {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Simple fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+=======
+/* MoodTracker.css */
+
+.mood-tracker {
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.mood-tracker h2 {
+  text-align: center;
+  color: #00695c;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.mood-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mood-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #b2dfdb;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mood-btn span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #00796b;
+}
+
+.mood-btn:hover {
+  background: #e0f2f1;
+  transform: translateY(-3px);
+  border-color: #00796b;
+}
+
+.mood-btn.selected {
+  background: #b2dfdb;
+  border-color: #00796b;
+  font-weight: bold;
+}
+
+.mood-history {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+}
+
+.mood-history h3 {
+  color: #004d40;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.mood-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mood-history li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 1rem;
+  color: #444;
+}
+
+.mood-history li span {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Simple fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+>>>>>>> a4fbcb947aecbcc13342cee25c501fb732435def

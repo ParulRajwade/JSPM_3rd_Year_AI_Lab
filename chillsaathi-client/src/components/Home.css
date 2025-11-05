@@ -1,0 +1,415 @@
+<<<<<<< HEAD
+/* ========== Homepage Container ========== */
+.home-container {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #e0f7fa); /* light meditation tone */
+  min-height: 100vh;
+  animation: fadeIn 1.5s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========== Headings ========== */
+.main-heading {
+  font-size: 3rem;
+  color: #00796b;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.sub-heading {
+  font-size: 1.4rem;
+  color: #444;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+/* ========== Cards Section ========== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.7rem;
+  width: 260px;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #2c3e50;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  background: #f0fdfc;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  color: #00695c;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ========== Quote Section ========== */
+.quote-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #fff8e1;
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.quote-title {
+  font-size: 1.3rem;
+  color: #6a1b9a;
+  margin-bottom: 0.6rem;
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  color: #333;
+  font-style: italic;
+}
+
+/* ========== Blog Section ========== */
+.blog-section {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: #e0f7fa;
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  color: #004d40;
+}
+
+.blog-section h3 {
+  margin-bottom: 1rem;
+}
+
+.blog-section ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+.blog-section li {
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+/* ========== Testimonials Section ========== */
+.testimonials {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: #f9fbe7;
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 750px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.testimonials h3 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: #33691e;
+}
+
+.testimonial {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #444;
+}
+
+/* ========== Footer ========== */
+.footer {
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  background: #004d40;
+  color: white;
+  font-size: 0.95rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+.daily-habits-section {
+  background: #e6f7f5;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  color: #2e3a59;
+  font-size: 1rem;
+}
+
+.daily-habits-section h3 {
+  color: #00897b;
+  margin-bottom: 1rem;
+}
+
+.daily-habits-section ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+.footer {
+  background-color: #0d1b2a;
+  color: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 2px solid #00bfa5;
+}
+
+.footer a {
+  color: #00e5ff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content p {
+  margin: 0.4rem 0;
+}
+
+/* ========== Animation Keyframes ========== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+=======
+/* ========== Homepage Container ========== */
+.home-container {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #e0f7fa); /* light meditation tone */
+  min-height: 100vh;
+  animation: fadeIn 1.5s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========== Headings ========== */
+.main-heading {
+  font-size: 3rem;
+  color: #00796b;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.sub-heading {
+  font-size: 1.4rem;
+  color: #444;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+/* ========== Cards Section ========== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.7rem;
+  width: 260px;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #2c3e50;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  background: #f0fdfc;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  color: #00695c;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ========== Quote Section ========== */
+.quote-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #fff8e1;
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.quote-title {
+  font-size: 1.3rem;
+  color: #6a1b9a;
+  margin-bottom: 0.6rem;
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  color: #333;
+  font-style: italic;
+}
+
+/* ========== Blog Section ========== */
+.blog-section {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: #e0f7fa;
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  color: #004d40;
+}
+
+.blog-section h3 {
+  margin-bottom: 1rem;
+}
+
+.blog-section ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+.blog-section li {
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+/* ========== Testimonials Section ========== */
+.testimonials {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: #f9fbe7;
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 750px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.testimonials h3 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: #33691e;
+}
+
+.testimonial {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #444;
+}
+
+/* ========== Footer ========== */
+.footer {
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  background: #004d40;
+  color: white;
+  font-size: 0.95rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+.daily-habits-section {
+  background: #e6f7f5;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  color: #2e3a59;
+  font-size: 1rem;
+}
+
+.daily-habits-section h3 {
+  color: #00897b;
+  margin-bottom: 1rem;
+}
+
+.daily-habits-section ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+.footer {
+  background-color: #0d1b2a;
+  color: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 2px solid #00bfa5;
+}
+
+.footer a {
+  color: #00e5ff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content p {
+  margin: 0.4rem 0;
+}
+
+/* ========== Animation Keyframes ========== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+>>>>>>> a4fbcb947aecbcc13342cee25c501fb732435def

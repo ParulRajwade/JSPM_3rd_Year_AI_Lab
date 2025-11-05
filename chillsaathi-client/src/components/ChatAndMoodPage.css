@@ -1,0 +1,394 @@
+<<<<<<< HEAD
+.chat-mood-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #dff9fb, #f6e58d);
+  min-height: 100vh;
+}
+
+/* Chatbox */
+.chatbox {
+  flex: 1 1 50%;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1);
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.chatbox h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #2d3436;
+  text-align: center;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #f1f2f6;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.user-msg {
+  text-align: right;
+  color: #2d3436;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.bot-msg {
+  text-align: left;
+  color: #0984e3;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.input-area input:focus {
+  border-color: #6c5ce7;
+  outline: none;
+}
+
+.input-area button {
+  padding: 0.7rem 1.2rem;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+  background-color: #4834d4;
+}
+
+/* MoodTracker.css */
+
+.mood-tracker {
+   flex: 1 1 50%;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1);
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.mood-tracker h2 {
+  text-align: center;
+  color: #00695c;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.mood-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mood-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #f3f8f8;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mood-btn span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #458d85;
+}
+
+.mood-btn:hover {
+  background: #e0f2f1;
+  transform: translateY(-3px);
+  border-color: #00796b;
+}
+
+.mood-btn.selected {
+  background: #b2dfdb;
+  border-color: #00796b;
+  font-weight: bold;
+}
+
+.mood-history {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+}
+
+.mood-history h3 {
+  color: #004d40;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.mood-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mood-history li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 1rem;
+  color: #444;
+}
+
+.mood-history li span {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Simple fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+=======
+.chat-mood-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #dff9fb, #f6e58d);
+  min-height: 100vh;
+}
+
+/* Chatbox */
+.chatbox {
+  flex: 1 1 50%;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1);
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.chatbox h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #2d3436;
+  text-align: center;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #f1f2f6;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.user-msg {
+  text-align: right;
+  color: #2d3436;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.bot-msg {
+  text-align: left;
+  color: #0984e3;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.input-area input:focus {
+  border-color: #6c5ce7;
+  outline: none;
+}
+
+.input-area button {
+  padding: 0.7rem 1.2rem;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+  background-color: #4834d4;
+}
+
+/* MoodTracker.css */
+
+.mood-tracker {
+   flex: 1 1 50%;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1);
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.mood-tracker h2 {
+  text-align: center;
+  color: #00695c;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.mood-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mood-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #f3f8f8;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mood-btn span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #458d85;
+}
+
+.mood-btn:hover {
+  background: #e0f2f1;
+  transform: translateY(-3px);
+  border-color: #00796b;
+}
+
+.mood-btn.selected {
+  background: #b2dfdb;
+  border-color: #00796b;
+  font-weight: bold;
+}
+
+.mood-history {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+}
+
+.mood-history h3 {
+  color: #004d40;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.mood-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mood-history li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 1rem;
+  color: #444;
+}
+
+.mood-history li span {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Simple fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+>>>>>>> a4fbcb947aecbcc13342cee25c501fb732435def
+}

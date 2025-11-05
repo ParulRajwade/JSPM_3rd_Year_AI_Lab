@@ -1,0 +1,211 @@
+<<<<<<< HEAD
+/* Full-page container to center chatbot */
+.chatbot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* soft, calming gradient */
+  padding: 20px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Chatbox Styling */
+.chatbox {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 460px;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.chatbox:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+.chatbox h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #6a11cb;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Chat area */
+#chat {
+  max-height: 280px;
+  overflow-y: auto;
+  background-color: #f4f8fb;
+  border: 1px solid #dcdfe6;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+}
+
+#chat p {
+  margin: 8px 0;
+}
+
+/* Messages */
+.user-msg {
+  color: #1e88e5;
+  font-weight: 500;
+}
+
+.bot-msg {
+  color: #43a047;
+  font-weight: 500;
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  gap: 12px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-area input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+/* Send Button */
+.input-area button {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-area button:hover {
+  background: linear-gradient(to right, #5a01a7, #1956d1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+=======
+/* Full-page container to center chatbot */
+.chatbot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* soft, calming gradient */
+  padding: 20px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Chatbox Styling */
+.chatbox {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 460px;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.chatbox:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+.chatbox h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #6a11cb;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Chat area */
+#chat {
+  max-height: 280px;
+  overflow-y: auto;
+  background-color: #f4f8fb;
+  border: 1px solid #dcdfe6;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+}
+
+#chat p {
+  margin: 8px 0;
+}
+
+/* Messages */
+.user-msg {
+  color: #1e88e5;
+  font-weight: 500;
+}
+
+.bot-msg {
+  color: #43a047;
+  font-weight: 500;
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  gap: 12px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-area input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+/* Send Button */
+.input-area button {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-area button:hover {
+  background: linear-gradient(to right, #5a01a7, #1956d1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+>>>>>>> a4fbcb947aecbcc13342cee25c501fb732435def

@@ -1,0 +1,151 @@
+<<<<<<< HEAD
+.sidebar {
+  margin: 20px 10px;
+  flex: 1;
+  background-color: #1e1e2f; /* Dark background for community */
+  color: #f0f0f0;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.2s ease-in-out;
+  width: 96%;
+  height: 100%;
+}
+
+/* Title */
+.sidebar h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #9a86fd;
+}
+
+/* Section Styling */
+.sidebar-section {
+  margin-bottom: 30px;
+  justify-content: center;
+ 
+}
+
+.sidebar-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #ffd54f;
+}
+
+/* List Styling */
+.sidebar ul {
+  list-style-type: "✨ ";
+  padding-left: 20px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
+.sidebar ul li {
+  margin-bottom: 8px;
+  word-spacing: 3px;
+}
+
+/* Link Styling */
+.sidebar a {
+  color: #80deea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+  color: #b2ebf2;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+=======
+.sidebar {
+  margin: 20px 10px;
+  flex: 1;
+  background-color: #1e1e2f; /* Dark background for community */
+  color: #f0f0f0;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.2s ease-in-out;
+  width: 96%;
+  height: 100%;
+}
+
+/* Title */
+.sidebar h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #9a86fd;
+}
+
+/* Section Styling */
+.sidebar-section {
+  margin-bottom: 30px;
+  justify-content: center;
+ 
+}
+
+.sidebar-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #ffd54f;
+}
+
+/* List Styling */
+.sidebar ul {
+  list-style-type: "✨ ";
+  padding-left: 20px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
+.sidebar ul li {
+  margin-bottom: 8px;
+  word-spacing: 3px;
+}
+
+/* Link Styling */
+.sidebar a {
+  color: #80deea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+  color: #b2ebf2;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+>>>>>>> a4fbcb947aecbcc13342cee25c501fb732435def

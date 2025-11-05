@@ -1,0 +1,403 @@
+<<<<<<< HEAD
+.meditation-page {
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-in;
+}
+
+.meditation-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #01579b;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.meditation-page p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Session Cards */
+.session-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.session-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-6px);
+}
+
+.session-card h3 {
+  color: #0277bd;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.session-card p {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.session-card audio {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+/* Benefits Section */
+.benefits {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.benefits h2 {
+  color: #01579b;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.benefits ul {
+  list-style: square;
+  padding-left: 2rem;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* Types of Meditation */
+.types {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.types h2 {
+  color: #01579b;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.type-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.type-card {
+  background-color: #e1f5f2;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  color: #0e6251;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Yoga & Breathing Techniques */
+.yoga-breathing {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.yoga-breathing h2 {
+  color: #01579b;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.yoga-breathing p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.yoga-breathing ul {
+  list-style: disc;
+  padding-left: 2rem;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.play-btn {
+  background-color: #7f9cf5;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: #5a7ce2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .session-list {
+    grid-template-columns: 1fr;
+  }
+
+  .type-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.audio-link-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.audio-link-btn:hover {
+  background-color: #45a049;
+}
+=======
+.meditation-page {
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-in;
+}
+
+.meditation-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #01579b;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.meditation-page p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Session Cards */
+.session-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.session-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-6px);
+}
+
+.session-card h3 {
+  color: #0277bd;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.session-card p {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.session-card audio {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+/* Benefits Section */
+.benefits {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.benefits h2 {
+  color: #01579b;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.benefits ul {
+  list-style: square;
+  padding-left: 2rem;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* Types of Meditation */
+.types {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.types h2 {
+  color: #01579b;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.type-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.type-card {
+  background-color: #e1f5f2;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  color: #0e6251;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Yoga & Breathing Techniques */
+.yoga-breathing {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.yoga-breathing h2 {
+  color: #01579b;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.yoga-breathing p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.yoga-breathing ul {
+  list-style: disc;
+  padding-left: 2rem;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.play-btn {
+  background-color: #7f9cf5;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: #5a7ce2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .session-list {
+    grid-template-columns: 1fr;
+  }
+
+  .type-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.audio-link-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.audio-link-btn:hover {
+  background-color: #45a049;
+}
+>>>>>>> a4fbcb947aecbcc13342cee25c501fb732435def
