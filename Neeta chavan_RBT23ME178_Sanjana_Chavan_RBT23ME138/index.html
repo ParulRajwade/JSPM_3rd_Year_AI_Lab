@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 800px;
+            height: 90vh;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .chat-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 18px;
+            border-radius: 18px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+
+        .message.bot .message-content {
+            background: white;
+            color: #333;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 12px 18px;
+            background: white;
+            border-radius: 18px;
+            border-bottom-left-radius: 4px;
+            width: fit-content;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 0 20px 20px 20px;
+        }
+
+        .typing-indicator span {
+            height: 8px;
+            width: 8px;
+            background: #667eea;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 2px;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        .chat-input-container {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .chat-input:focus {
+            border-color: #667eea;
+        }
+
+        .send-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .send-button:hover {
+            transform: scale(1.05);
+        }
+
+        .send-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: scale(1);
+        }
+
+        .quick-questions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .quick-question-btn {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+
+        .quick-question-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🎓 College Information Bot</h1>
+            <p>Ask me about courses, fees, departments, and events!</p>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-content">
+                    Hello! 👋 I'm your College Information Bot. I can help you with:
+
+📚 Courses offered
+💰 Fee structure
+🏢 Departments
+📅 Upcoming events
+🏠 Facilities
+📝 Admission process
+
+What would you like to know?
+                </div>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="chat-input-container">
+            <div class="quick-questions">
+                <button class="quick-question-btn" onclick="sendQuickQuestion('What courses do you offer?')">📚 Courses</button>
+                <button class="quick-question-btn" onclick="sendQuickQuestion('Tell me about the fees')">💰 Fees</button>
+                <button class="quick-question-btn" onclick="sendQuickQuestion('What departments are available?')">🏢 Departments</button>
+                <button class="quick-question-btn" onclick="sendQuickQuestion('Any upcoming events?')">📅 Events</button>
+            </div>
+            <div class="chat-input-wrapper">
+                <input type="text" class="chat-input" id="userInput" placeholder="Type your question here..." onkeypress="handleKeyPress(event)">
+                <button class="send-button" id="sendButton" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const collegeData = {
+            courses: {
+                keywords: ['course', 'courses', 'program', 'programs', 'degree', 'study', 'branch', 'stream'],
+                response: `We offer the following courses:
+
+🎓 Engineering Programs (4 years):
+   • Computer Science Engineering (CSE)
+   • Electronics & Communication (ECE)
+   • Mechanical Engineering (ME)
+   • Civil Engineering (CE)
+
+💼 Management:
+   • Master of Business Administration (MBA) - 2 years
+
+📖 Arts & Science (3 years):
+   • Bachelor of Arts (BA)
+   • Bachelor of Science (BSc)
+
+Would you like to know more about any specific course?`
+            },
+            fees: {
+                keywords: ['fee', 'fees', 'cost', 'price', 'tuition', 'payment', 'money', 'expensive', 'cheap'],
+                response: `Here's our fee structure:
+
+💰 Annual Fees:
+   • Engineering (CSE/ECE/ME/CE): $10,000/year
+   • MBA Program: $15,000/year
+   • Bachelor of Arts (BA): $7,000/year
+   • Bachelor of Science (BSc): $8,000/year
+
+🏠 Additional Costs:
+   • Hostel fees: $2,000/year (optional)
+   • Library fee: $200/year
+   • Application fee: $50 (one-time)
+
+Payment can be made semester-wise or annually. Scholarships are available for meritorious students!`
+            },
+            departments: {
+                keywords: ['department', 'departments', 'faculty', 'division'],
+                response: `Our college has the following departments:
+
+🏢 Academic Departments:
+   • Computer Science & Engineering
+   • Electronics & Communication
+   • Mechanical Engineering
+   • Civil Engineering
+   • Business Management
+   • Arts
+   • Science
+
+Each department has experienced faculty members and modern facilities to ensure quality education.`
+            },
+            events: {
+                keywords: ['event', 'events', 'fest', 'festival', 'function', 'activity', 'competition', 'happening'],
+                response: `Upcoming Events at our college:
+
+📅 Tech Fest 2024
+   Date: December 15-17
+   Activities: Coding competitions, hackathons, tech talks
+
+🏃 Annual Sports Day
+   Date: January 20
+   Activities: Inter-department sports competitions
+
+🎭 Cultural Festival
+   Date: February 10-12
+   Activities: Dance, music, drama performances
+
+💼 Job Fair
+   Date: March 5
+   Companies: 50+ companies participating
+
+🔬 Science Exhibition
+   Date: March 20
+
+Stay tuned for more updates!`
+            },
+            facilities: {
+                keywords: ['facility', 'facilities', 'infrastructure', 'amenities', 'lab', 'library', 'hostel', 'canteen', 'cafeteria', 'sports', 'gym'],
+                response: `Our college facilities include:
+
+🖥️ Academic Facilities:
+   • Modern computer labs with latest software
+   • Well-equipped engineering workshops
+   • Digital library with 50,000+ books
+   • Research labs
+
+🏠 Campus Facilities:
+   • Separate hostels for boys and girls
+   • Cafeteria and food court
+   • Medical center with 24/7 service
+   • Sports complex (indoor & outdoor)
+   • Gymnasium
+   • Wi-Fi enabled campus
+
+💼 Support Services:
+   • Placement cell
+   • Career counseling
+   • Transportation facility`
+            },
+            admission: {
+                keywords: ['admission', 'admissions', 'apply', 'application', 'enroll', 'enrollment', 'join', 'eligibility', 'entrance'],
+                response: `Admission Process:
+
+📝 Application Process:
+   • Application deadline: June 30
+   • Online application available
+   • Application fee: $50
+
+📊 Selection Process:
+   • Entrance exam in July
+   • Merit-based selection
+   • Personal interview (for MBA)
+
+✅ Eligibility:
+   • Engineering: 12th grade with Physics, Chemistry, Math (60%+)
+   • MBA: Bachelor's degree in any field (50%+)
+   • BA/BSc: 12th grade (50%+)
+
+📞 For more details, contact our admission office or visit our website.`
+            },
+            contact: {
+                keywords: ['contact', 'phone', 'email', 'address', 'location', 'reach', 'call'],
+                response: `Contact Information:
+
+📍 Address:
+   123 University Road, Education City
+   State - 123456
+
+📞 Phone: +1 234-567-8900
+📧 Email: info@college.edu
+🌐 Website: www.college.edu
+
+Office Hours: Monday - Friday, 9 AM - 5 PM
+
+You can also visit our campus for a guided tour!`
+            },
+            cse: {
+                keywords: ['cse', 'computer science', 'cs', 'software', 'programming', 'coding'],
+                response: `Computer Science Engineering (CSE):
+
+Duration: 4 years
+Fee: $10,000/year
+
+📚 What you'll learn:
+   • Programming & Software Development
+   • Data Structures & Algorithms
+   • Database Management
+   • Web Development
+   • Artificial Intelligence & Machine Learning
+   • Cybersecurity
+
+💼 Career Opportunities:
+   • Software Developer
+   • Data Scientist
+   • Web Developer
+   • System Analyst
+   • AI/ML Engineer
+
+Our CSE department has state-of-the-art labs and experienced faculty!`
+            },
+            ece: {
+                keywords: ['ece', 'electronics', 'communication', 'electrical'],
+                response: `Electronics & Communication Engineering (ECE):
+
+Duration: 4 years
+Fee: $10,000/year
+
+📚 What you'll learn:
+   • Digital Electronics
+   • Communication Systems
+   • VLSI Design
+   • Signal Processing
+   • Embedded Systems
+   • Microprocessors
+
+💼 Career Opportunities:
+   • Electronics Engineer
+   • Telecom Engineer
+   • VLSI Designer
+   • Network Engineer
+   • R&D Engineer`
+            },
+            mba: {
+                keywords: ['mba', 'management', 'business administration'],
+                response: `Master of Business Administration (MBA):
+
+Duration: 2 years
+Fee: $15,000/year
+
+📚 Specializations:
+   • Finance
+   • Marketing
+   • Human Resources
+   • Operations Management
+
+💼 Career Opportunities:
+   • Business Manager
+   • Marketing Manager
+   • Financial Analyst
+   • HR Manager
+   • Consultant
+
+Our MBA program includes internships with top companies!`
+            }
+        };
+
+        function findBestMatch(message) {
+            message = message.toLowerCase();
+            let bestMatch = null;
+            let highestScore = 0;
+
+            for (const [key, data] of Object.entries(collegeData)) {
+                let score = 0;
+                for (const keyword of data.keywords) {
+                    if (message.includes(keyword)) {
+                        score++;
+                    }
+                }
+                if (score > highestScore) {
+                    highestScore = score;
+                    bestMatch = data.response;
+                }
+            }
+
+            return bestMatch;
+        }
+
+        function addMessage(content, isUser) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.textContent = content;
+            
+            messageDiv.appendChild(contentDiv);
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            document.getElementById('typingIndicator').style.display = 'block';
+            const chatMessages = document.getElementById('chatMessages');
+            setTimeout(() => {
+                chatMessages.scrollTop = chatMessages.scrollHeight + 100;
+            }, 100);
+        }
+
+        function hideTypingIndicator() {
+            document.getElementById('typingIndicator').style.display = 'none';
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            addMessage(message, true);
+            input.value = '';
+            
+            const sendButton = document.getElementById('sendButton');
+            sendButton.disabled = true;
+            showTypingIndicator();
+
+            setTimeout(() => {
+                const response = findBestMatch(message);
+                
+                if (response) {
+                    addMessage(response, false);
+                } else {
+                    const defaultResponse = `I can help you with information about:
+
+• Courses and programs
+• Fee structure
+• Departments
+• Events and activities
+• Facilities
+• Admission process
+• Contact information
+
+Please ask me about any of these topics!`;
+                    addMessage(defaultResponse, false);
+                }
+                
+                hideTypingIndicator();
+                sendButton.disabled = false;
+            }, 1000);
+        }
+
+        function sendQuickQuestion(question) {
+            document.getElementById('userInput').value = question;
+            sendMessage();
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+    </script>
+</body>
+</html>
