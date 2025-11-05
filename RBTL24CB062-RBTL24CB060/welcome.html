@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center py-5">
+  <h1 class="display-4 fw-bold rainbow-text">Create Your Own Story!</h1>
+  <p class="lead">Welcome to Story World — Go Into the Magical Story Land!</p>
+  <div class="my-4">
+    <img alt="Kids reading books together in a library" class="rainbow-hero" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop">
+  <div class="d-flex gap-3 justify-content-center">
+    <a class="btn btn-lg btn-primary rounded-pill px-4" href="{{ url_for('login') }}">Login</a>
+    <a class="btn btn-lg btn-success rounded-pill px-4" href="{{ url_for('signup') }}">Sign Up</a>
+  </div>
+</div>
+{% endblock %}
